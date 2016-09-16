@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:screenOrientation="portrait">
+    >
+    <com.isotope.Button_Wars.RotateButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resume"
+            android:id="@+id/closea"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_centerHorizontal="true"/>
+    <com.isotope.Button_Wars.UpsideDownText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/paused"
+            android:id="@+id/Pauseda"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_below="@id/closea"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/paused"
+            android:id="@+id/Paused"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_below="@id/Pauseda"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resume"
+            android:id="@+id/close"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_below="@id/Paused"/>
+
+
+</RelativeLayout>

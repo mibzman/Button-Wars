@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Button Wars</string>
+    <string name="title_activity_double">Double</string>
+    <string name="title_activity_doubledone">Results</string>
+    <string name="title_activity_done">Results</string>
+    <string name="title_activity_doubleend">Final Results</string>
+    <string name="title_activity_list">Jump To Level</string>
+    <string name="welcome">Welcome, to Button Wars!
+        To play, press the +1 button to add points to your score, and the -1 button to take
+        points away from your opponent! Two Player Mode will let you best your friends,
+        but Adventure Mode will pit you against my Machine. To enter a Level Code, press the Menu key.
+    </string>
+    <string name="twoplayer">2 Player Mode</string>
+    <string name="twoplayertitle">2 Player:</string>
+    <string name="adventure">Adventure Mode</string>
+    <string name="adventuretitle">Adventure:</string>
+    <string name="pause">Pause</string>
+    <string name="paused">Paused</string>
+    <string name="resume">Resume</string>
+    <string name="player1">Player One</string>
+    <string name="player2">Player Two</string>
+    <string name="score">Score</string>
+    <string name="number">0</string>
+    <string name="plus">+1</string>
+    <string name="minus">-1</string>
+    <string name="won">WON!</string>
+    <string name="you">You</string>
+    <string name="lost">LOST!</string>
+    <string name="congrats">Congratulations</string>
+    <string name="nextm">Next Match</string>
+    <string name="rematch">Rematch</string>
+    <string name="begin">Begin</string>
+    <string name="youre">You\'re</string>
+    <string name="done">Done!</string>
+    <string name="mainm">Main Menu</string>
+    <string name="single">Single Player</string>
+    <string name="one">Level 1</string>
+    <string name="two">Level 2</string>
+    <string name="three">Level 3</string>
+    <string name="four">Level 4</string>
+    <string name="five">Level 5</string>
+    <string name="thenumbersix">Level 6</string>
+    <string name="seven">Level 7</string>
+    <string name="eight">Level 8</string>
+    <string name="nine">Level 9</string>
+    <string name="ten">Level 10</string>
+    <string name="eleven">Level 11</string>
+    <string name="twelve">Level 12</string>
+    <string name="thirteen">Level 13</string>
+    <string name="fourteen">Level 14</string>
+    <string name="fifteen">Level 15</string>
+    <string name="sixteen">Level 16</string>
+    <string name="seventeen">Level 17</string>
+    <string name="eighteen">Level 18</string>
+    <string name="nineteen">Level 19</string>
+    <string name="twenty">Level 20</string>
+    <string name="gotolvl">Jump to Level</string>
+    <string name="select">Select</string>
+
+</resources>

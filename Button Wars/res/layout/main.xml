@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:screenOrientation="portrait">
+
+    >
+    <LinearLayout
+            xmlns:andorid="http://schemas.android.com/apk/res/android"
+            andorid:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        <TextView
+                andorid:layout_width="wrap_content"
+                andorid:layout_height="wrap_content"
+                andorid:text="@string/welcome"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                andorid:id="@+id/welcome"
+                android:layout_centerHorizontal="true"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/twoplayer"
+                android:id="@+id/twoplayer"
+                android:layout_below="@id/welcome"
+                android:layout_marginTop="50dp"
+                andorid:layout_gravity="center"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/adventure"
+                android:id="@+id/adventure"
+                android:layout_below="@id/twoplayer"
+                android:layout_marginTop="50dp"
+                andorid:layout_gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+            xmlns:andorid="http://schemas.android.com/apk/res/android"
+            andorid:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mainLayout"
+            android:layout_alignParentBottom="true">
+    </LinearLayout>
+</RelativeLayout>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+
+    <!-- Single menu item           Set id, icon and Title for each menu item     -->
+    <item android:id="@+id/menu_home"
+          android:icon="@drawable/ic_menu_home"
+          android:title="Home"/>
+    <item android:id="@+id/menu_list"
+          android:icon="@drawable/ic_menu_list"
+          android:title="Level Code"/>
+
+</menu>

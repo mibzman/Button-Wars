@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:screenOrientation="portrait">
+    <RelativeLayout
+            xmlns:andorid="http://schemas.android.com/apk/res/android"
+            andorid:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/player1Set"
+            android:layout_alignParentBottom="true"
+            andorid:layout_marginBottom="60dp">
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/pause"
+                android:id="@+id/p1Pause"
+                android:layout_centerVertical="true"
+                andorid:layout_centerHorizontal="true"
+                andorid:layout_alignParentTop="true"
+                />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/player1"
+                android:id="@+id/player1"
+                andorid:layout_toLeftOf="@+id/p1Pause"
+                andorid:layout_below="@+id/p1Pause"/>
+        <TextView
+                andorid:layout_width="wrap_content"
+                andorid:layout_height="wrap_content"
+                andorid:text="@string/score"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                andorid:id="@+id/score1"
+                andorid:layout_toLeftOf="@+id/p1Pause"
+                andorid:layout_below="@+id/player1"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/player2"
+                android:id="@+id/player2"
+                andorid:layout_toRightOf="@+id/p1Pause"
+                andorid:layout_below="@+id/p1Pause"/>
+        <TextView
+                andorid:layout_width="wrap_content"
+                andorid:layout_height="wrap_content"
+                andorid:text="@string/score"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                andorid:id="@+id/score2"
+                andorid:layout_toRightOf="@+id/p1Pause"
+                andorid:layout_below="@+id/player2"/>
+        <TextView andorid:textAppearance="?android:attr/textAppearanceLarge"
+                  andorid:layout_height="wrap_content"
+                  andorid:text="@string/number"
+                  andorid:id="@+id/p1Scorez"
+                  andorid:layout_width="wrap_content"
+                  andorid:layout_toLeftOf="@+id/p1Pause"
+                  andorid:layout_below="@+id/score1"/>
+        <TextView andorid:textAppearance="?android:attr/textAppearanceLarge"
+                  andorid:text="@string/number"
+                  andorid:id="@+id/p2Scorez"
+                  andorid:layout_width="wrap_content"
+                  andorid:layout_height="wrap_content"
+                  andorid:layout_toRightOf="@+id/p1Pause"
+                  andorid:layout_below="@+id/score1"/>
+        <Button
+                andorid:layout_width="wrap_content"
+                andorid:layout_height="wrap_content"
+                andorid:text="@string/plus"
+                andorid:id="@+id/p1Plus"
+                andorid:layout_toLeftOf="@+id/p1Pause"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                andorid:layout_below="@+id/p1Scorez"/>
+        <Button andorid:text="@string/minus"
+                andorid:id="@+id/p1Minus"
+                andorid:layout_width="wrap_content"
+                andorid:layout_height="wrap_content"
+                andorid:layout_toRightOf="@+id/p1Pause"
+                andorid:layout_below="@+id/p1Scorez"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </RelativeLayout>
+
+    <com.google.ads.AdView android:id="@+id/adView"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_alignParentBottom="true"
+                           ads:adUnitId="a15294da162b2a7"
+                           ads:adSize="BANNER"
+                           ads:loadAdOnCreate="true"/>
+
+</RelativeLayout>

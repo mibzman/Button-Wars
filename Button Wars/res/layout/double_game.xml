@@ -72,14 +72,14 @@
         <com.isotope.Button_Wars.RotateButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/plus"
-                android:id="@+id/p2Plus"
+                android:text="@string/minus"
+                android:id="@+id/p2Minus"
                 android:layout_toLeftOf="@+id/p2Pause"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_above="@+id/p1Scorea"></com.isotope.Button_Wars.RotateButton>
         <com.isotope.Button_Wars.RotateButton
-                android:text="@string/minus"
-                android:id="@+id/p2Minus"
+                android:text="@string/plus"
+                android:id="@+id/p2Plus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/p2Pause"

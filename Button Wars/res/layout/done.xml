@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:screenOrientation="portrait">
+
+    <RelativeLayout
+            xmlns:andorid="http://schemas.android.com/apk/res/android"
+            andorid:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/player1Set"
+            android:layout_alignParentBottom="true"
+            andorid:layout_marginBottom="60dp">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/congrats"
+                android:id="@+id/congrats"
+                android:layout_centerVertical="true"
+                andorid:layout_centerHorizontal="true"
+                andorid:layout_alignParentTop="true"
+                />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/you"
+                android:id="@+id/you"
+                andorid:layout_centerHorizontal="true"
+                andorid:layout_below="@id/congrats"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/won"
+                android:id="@+id/wonz"
+                andorid:layout_centerHorizontal="true"
+                andorid:layout_below="@id/you"/>
+        <Button
+                andorid:layout_width="wrap_content"
+                andorid:layout_height="wrap_content"
+                andorid:text="@string/nextm"
+                andorid:id="@+id/nextm"
+                andorid:layout_centerHorizontal="true"
+                andorid:layout_below="@+id/wonz"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <Button
+                andorid:layout_width="wrap_content"
+                andorid:layout_height="wrap_content"
+                andorid:text="@string/rematch"
+                andorid:id="@+id/rematch"
+                andorid:layout_centerHorizontal="true"
+                andorid:layout_below="@+id/nextm"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

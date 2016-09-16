@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:screenOrientation="portrait">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/player2Set"
+                    android:layout_alignLeft="@+id/player1Set" android:layout_above="@+id/player1Set">
+        <com.isotope.Button_Wars.UpsideDownText
+                android:layout_height="wrap_content"
+                android:id="@+id/congratsa"
+                android:text="@string/congrats"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"></com.isotope.Button_Wars.UpsideDownText>
+        <com.isotope.Button_Wars.UpsideDownText
+                android:layout_height="wrap_content"
+                android:id="@+id/youa"
+                android:text="@string/you"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/congratsa"></com.isotope.Button_Wars.UpsideDownText>
+        <com.isotope.Button_Wars.UpsideDownText
+                android:layout_height="wrap_content"
+                android:id="@+id/wona"
+                android:text="@string/won"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/youa"></com.isotope.Button_Wars.UpsideDownText>
+        <com.isotope.Button_Wars.RotateButton
+                android:layout_height="wrap_content"
+                android:id="@+id/nextma"
+                android:text="@string/nextm"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/wona"></com.isotope.Button_Wars.RotateButton>
+        <com.isotope.Button_Wars.RotateButton
+                android:layout_height="wrap_content"
+                android:id="@+id/rematcha"
+                android:text="@string/rematch"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/nextma"></com.isotope.Button_Wars.RotateButton>
+    </RelativeLayout>
+
+    <RelativeLayout
+            xmlns:andorid="http://schemas.android.com/apk/res/android"
+            andorid:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/player1Set"
+            android:layout_alignParentBottom="true"
+            andorid:layout_marginBottom="60dp">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/congrats"
+                android:id="@+id/congrats"
+                android:layout_centerVertical="true"
+                andorid:layout_centerHorizontal="true"
+                andorid:layout_alignParentTop="true"
+                />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/you"
+                android:id="@+id/you"
+                andorid:layout_centerHorizontal="true"
+                andorid:layout_below="@id/congrats"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/won"
+                android:id="@+id/won"
+                andorid:layout_centerHorizontal="true"
+                andorid:layout_below="@id/you"/>
+        <Button
+                andorid:layout_width="wrap_content"
+                andorid:layout_height="wrap_content"
+                andorid:text="@string/nextm"
+                andorid:id="@+id/nextm"
+                andorid:layout_centerHorizontal="true"
+                andorid:layout_below="@+id/won"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <Button
+                andorid:layout_width="wrap_content"
+                andorid:layout_height="wrap_content"
+                andorid:text="@string/rematch"
+                andorid:id="@+id/rematch"
+                andorid:layout_centerHorizontal="true"
+                andorid:layout_below="@+id/nextm"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
