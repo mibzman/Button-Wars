@@ -7,10 +7,9 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.*;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.*;
 import com.google.ads.AdRequest;
 import com.google.ads.AdSize;
 import com.google.ads.AdView;
@@ -29,14 +28,13 @@ public class Double extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.double_game);
-        //makeAd();
+
         pauseListiner();
         buttonListener();
         lvlGetter();
         setScores();
         startDoubleStart();
     }
-
     public void startDoubleStart() {
         final Dialog dialog = new Dialog(context);
         dialog.setCancelable(false);
@@ -167,7 +165,6 @@ public class Double extends Activity {
         });
         dialog.show();
     }
-
     public void buttonListener() {
 
         Button p1Plus = (Button) findViewById(R.id.p1Plus);
@@ -178,6 +175,7 @@ public class Double extends Activity {
                 p1ScoreVal = p1ScoreVal + 1;
                 setScores();
                 compareScores();
+                tank1Plus();
             }
         });
 
@@ -189,6 +187,7 @@ public class Double extends Activity {
                 p2ScoreVal = p2ScoreVal - 1;
                 setScores();
                 compareScores();
+                tank2Minus();
             }
         });
 
@@ -200,6 +199,7 @@ public class Double extends Activity {
                 p1ScoreVal = p1ScoreVal - 1;
                 setScores();
                 compareScores();
+                tank1Minus();
             }
         });
 
@@ -211,10 +211,10 @@ public class Double extends Activity {
                 p2ScoreVal = p2ScoreVal + 1;
                 setScores();
                 compareScores();
+                tank2Plus();
             }
         });
     }
-
     public void setScores() {
         TextView p1Score = (TextView) findViewById(R.id.p1Score);
         TextView p1Scorea = (TextView) findViewById(R.id.p1Scorea);
@@ -225,7 +225,6 @@ public class Double extends Activity {
         p2Score.setText("" + p2ScoreVal + "");
         p2Scorea.setText("" + p2ScoreVal + "");
     }
-
     public void compareScores() {
         int antiGoalScore = goalScore - 2 * goalScore;
         if (p1ScoreVal >= goalScore) {
@@ -239,21 +238,62 @@ public class Double extends Activity {
         } else {
         }
     }
-
+    public void tank1Plus(){
+        ImageView tank1 = (ImageView) findViewById(R.id.image1);
+        DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        int width = metrics.widthPixels;
+        int height = metrics.heightPixels;
+        int divided = (int) (tank1.getLeft() - (((width/2)-37)/goalScore));
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        params.leftMargin = divided;
+        tank1.setLayoutParams(params);
+    }
+    public void tank1Minus() {
+        ImageView tank1 = (ImageView) findViewById(R.id.image1);
+        DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        int width = metrics.widthPixels;
+        int height = metrics.heightPixels;
+        int divided = (int) (tank1.getLeft() + (((width/2)-37)/goalScore));
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        params.leftMargin = divided;
+        tank1.setLayoutParams(params);
+    }
+    public void tank2Plus() {
+        ImageView tank2 = (ImageView) findViewById(R.id.image2);
+        DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        int width = metrics.widthPixels;
+        int height = metrics.heightPixels;
+        int divided = (int) (tank2.getLeft() + (((width/2)-37)/goalScore));
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        params.leftMargin = divided;
+        tank2.setLayoutParams(params);
+    }
+    public void tank2Minus() {
+        ImageView tank2 = (ImageView) findViewById(R.id.image2);
+        DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        int width = metrics.widthPixels;
+        int height = metrics.heightPixels;
+        int divided = (int) (tank2.getLeft()  - (((width/2)-37)/goalScore));
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        params.leftMargin = divided;
+        tank2.setLayoutParams(params);
+    }
     public void sendP1() {
         Intent intent2 = new Intent(this, DoubleDone.class);
         intent2.putExtra("wilma", 1);    //sends who won
         intent2.putExtra("message", lvl);    //sends level to end
         startActivity(intent2);
     }
-
     public void sendP2() {
         Intent intent2 = new Intent(this, DoubleDone.class);
         intent2.putExtra("wilma", 0);    //sends who won
         intent2.putExtra("message", lvl);    //sends level to end
         startActivity(intent2);
     }
-
     public void lvlGetter() {
         Intent intent3 = getIntent();
         boolean first = intent3.getBooleanExtra("first", true);
@@ -399,7 +439,6 @@ public class Double extends Activity {
         }
 
     }
-
     public void pauseListiner() {
         Button p1Pause = (Button) findViewById(R.id.p1Pause);
         p1Pause.setOnClickListener(new View.OnClickListener() {
@@ -450,24 +489,10 @@ public class Double extends Activity {
             }
         });
     }
-
-    public void makeAd() {
-
-    }
-
-    @Override
-    public void onDestroy() {
-        if (adView != null) {
-            adView.destroy();
-        }
-        super.onDestroy();
-    }
-
     public void goHome() {
         Intent goHome = new Intent(this, Welcome.class);
         startActivity(goHome);
     }
-
     public void codeSender(int value) {
         Intent codeIntentSingle = new Intent(this, Single.class);
         Intent codeIntentDouble = new Intent(this, Double.class);
@@ -675,7 +700,6 @@ public class Double extends Activity {
 
         }
     }
-
     public void showCode() {
         final EditText lvlCode = new EditText(this);
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
@@ -779,14 +803,12 @@ public class Double extends Activity {
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.layout.menu, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -800,7 +822,6 @@ public class Double extends Activity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
     @Override
     public void onBackPressed() {
         super.onBackPressed();

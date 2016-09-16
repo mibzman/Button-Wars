@@ -5,7 +5,37 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:screenOrientation="portrait">
+                android:screenOrientation="portrait"
+                android:background="@drawable/background">
+    <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/picture1"
+            android:layout_above="@id/player1Set">
+
+        <ImageView
+                android:id="@+id/image1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/player1"
+                android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/picture2"
+            android:layout_above="@id/picture1">
+
+        <ImageView
+                android:id="@+id/image2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/player2up"
+                android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
     <RelativeLayout
             xmlns:andorid="http://schemas.android.com/apk/res/android"
             andorid:orientation="vertical"

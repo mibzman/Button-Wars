@@ -8,10 +8,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.DisplayMetrics;
 import android.view.*;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.*;
 
 import java.util.Random;
 
@@ -39,7 +38,6 @@ public class Single extends Activity {
         super.onPause();
         timeDecider = false;
     }
-
     public void startSingleStart() {
         final Dialog dialog = new Dialog(context);
         dialog.setCancelable(false);
@@ -120,7 +118,6 @@ public class Single extends Activity {
         });
         dialog.show();
     }
-
     public void pauseListiner() {
         Button p1Pause = (Button) findViewById(R.id.p1Pause);
         p1Pause.setOnClickListener(new View.OnClickListener() {
@@ -145,7 +142,6 @@ public class Single extends Activity {
         });
 
     }
-
     public void repeatr() {
         if (timeDecider) {
             final Handler handler = new Handler();
@@ -157,7 +153,6 @@ public class Single extends Activity {
             }, repeatTime);
         }
     }
-
     public void player2() {
         Random plus = new Random();
         Random minus = new Random();
@@ -169,9 +164,11 @@ public class Single extends Activity {
                 minusr = minus.nextInt(200);
                 if (plusr > 100) {
                     p2ScoreVal = p2ScoreVal + 1;
+                    tank2Plus();
                 }
                 if (minusr > 100) {
                     p1ScoreVal = p1ScoreVal - 1;
+                    tank1Minus();
                 }
                 break;
             case 2:
@@ -179,9 +176,11 @@ public class Single extends Activity {
                 minusr = minus.nextInt(200);
                 if (plusr > 95) {
                     p2ScoreVal = p2ScoreVal + 1;
+                    tank2Plus();
                 }
                 if (minusr > 95) {
                     p1ScoreVal = p1ScoreVal - 1;
+                    tank1Minus();
                 }
                 break;
             case 3:
@@ -189,9 +188,11 @@ public class Single extends Activity {
                 minusr = minus.nextInt(200);
                 if (plusr > 90) {
                     p1ScoreVal = p1ScoreVal - 1;
+                    tank1Minus();
                 }
                 if (minusr > 90) {
                     p2ScoreVal = p2ScoreVal + 1;
+                    tank2Plus();
                 }
                 break;
             case 4:
@@ -199,9 +200,11 @@ public class Single extends Activity {
                 minusr = minus.nextInt(200);
                 if (plusr > 85) {
                     p1ScoreVal = p1ScoreVal - 1;
+                    tank1Minus();
                 }
                 if (minusr > 85) {
                     p2ScoreVal = p2ScoreVal + 1;
+                    tank2Plus();
                 }
                 break;
             case 5:
@@ -209,9 +212,11 @@ public class Single extends Activity {
                 minusr = minus.nextInt(200);
                 if (plusr > 80) {
                     p1ScoreVal = p1ScoreVal - 1;
+                    tank1Minus();
                 }
                 if (minusr > 80) {
                     p2ScoreVal = p2ScoreVal + 1;
+                    tank2Plus();
                 }
                 break;
             case 6:
@@ -219,9 +224,11 @@ public class Single extends Activity {
                 minusr = minus.nextInt(200);
                 if (plusr > 75) {
                     p1ScoreVal = p1ScoreVal - 1;
+                    tank1Minus();
                 }
                 if (minusr > 75) {
                     p2ScoreVal = p2ScoreVal + 1;
+                    tank2Plus();
                 }
                 break;
             case 7:
@@ -229,9 +236,11 @@ public class Single extends Activity {
                 minusr = minus.nextInt(200);
                 if (plusr > 70) {
                     p1ScoreVal = p1ScoreVal - 1;
+                    tank1Minus();
                 }
                 if (minusr > 70) {
                     p2ScoreVal = p2ScoreVal + 1;
+                    tank2Plus();
                 }
                 break;
             case 8:
@@ -239,9 +248,11 @@ public class Single extends Activity {
                 minusr = minus.nextInt(200);
                 if (plusr > 65) {
                     p1ScoreVal = p1ScoreVal - 1;
+                    tank1Minus();
                 }
                 if (minusr > 65) {
                     p2ScoreVal = p2ScoreVal + 1;
+                    tank2Plus();
                 }
                 break;
             case 9:
@@ -249,9 +260,11 @@ public class Single extends Activity {
                 minusr = minus.nextInt(200);
                 if (plusr > 60) {
                     p1ScoreVal = p1ScoreVal - 1;
+                    tank1Minus();
                 }
                 if (minusr > 60) {
                     p2ScoreVal = p2ScoreVal + 1;
+                    tank2Plus();
                 }
                 break;
             case 10:
@@ -259,9 +272,11 @@ public class Single extends Activity {
                 minusr = minus.nextInt(200);
                 if (plusr > 55) {
                     p1ScoreVal = p1ScoreVal - 1;
+                    tank1Minus();
                 }
                 if (minusr > 55) {
                     p2ScoreVal = p2ScoreVal + 1;
+                    tank2Plus();
                 }
                 break;
             case 11:
@@ -269,9 +284,11 @@ public class Single extends Activity {
                 minusr = minus.nextInt(200);
                 if (plusr > 50) {
                     p1ScoreVal = p1ScoreVal - 1;
+                    tank1Minus();
                 }
                 if (minusr > 50) {
                     p2ScoreVal = p2ScoreVal + 1;
+                    tank2Plus();
                 }
                 break;
             case 12:
@@ -279,9 +296,11 @@ public class Single extends Activity {
                 minusr = minus.nextInt(200);
                 if (plusr > 45) {
                     p1ScoreVal = p1ScoreVal - 1;
+                    tank1Minus();
                 }
                 if (minusr > 45) {
                     p2ScoreVal = p2ScoreVal + 1;
+                    tank2Plus();
                 }
                 break;
             case 13:
@@ -289,9 +308,11 @@ public class Single extends Activity {
                 minusr = minus.nextInt(200);
                 if (plusr > 40) {
                     p1ScoreVal = p1ScoreVal - 1;
+                    tank1Minus();
                 }
                 if (minusr > 40) {
                     p2ScoreVal = p2ScoreVal + 1;
+                    tank2Plus();
                 }
                 break;
             case 14:
@@ -299,9 +320,11 @@ public class Single extends Activity {
                 minusr = minus.nextInt(200);
                 if (plusr > 35) {
                     p1ScoreVal = p1ScoreVal - 1;
+                    tank1Minus();
                 }
                 if (minusr > 35) {
                     p2ScoreVal = p2ScoreVal + 1;
+                    tank2Plus();
                 }
                 break;
             case 15:
@@ -309,9 +332,11 @@ public class Single extends Activity {
                 minusr = minus.nextInt(200);
                 if (plusr > 30) {
                     p1ScoreVal = p1ScoreVal - 1;
+                    tank1Minus();
                 }
                 if (minusr > 30) {
                     p2ScoreVal = p2ScoreVal + 1;
+                    tank2Plus();
                 }
                 break;
             case 16:
@@ -319,9 +344,11 @@ public class Single extends Activity {
                 minusr = minus.nextInt(200);
                 if (plusr > 25) {
                     p1ScoreVal = p1ScoreVal - 1;
+                    tank1Minus();
                 }
                 if (minusr > 25) {
                     p2ScoreVal = p2ScoreVal + 1;
+                    tank2Plus();
                 }
                 break;
             case 17:
@@ -329,9 +356,11 @@ public class Single extends Activity {
                 minusr = minus.nextInt(200);
                 if (plusr > 20) {
                     p1ScoreVal = p1ScoreVal - 1;
+                    tank1Minus();
                 }
                 if (minusr > 20) {
                     p2ScoreVal = p2ScoreVal + 1;
+                    tank2Plus();
                 }
                 break;
             case 18:
@@ -339,9 +368,11 @@ public class Single extends Activity {
                 minusr = minus.nextInt(200);
                 if (plusr > 15) {
                     p1ScoreVal = p1ScoreVal - 1;
+                    tank1Minus();
                 }
                 if (minusr > 15) {
                     p2ScoreVal = p2ScoreVal + 1;
+                    tank2Plus();
                 }
                 break;
             case 19:
@@ -349,9 +380,11 @@ public class Single extends Activity {
                 minusr = minus.nextInt(200);
                 if (plusr > 10) {
                     p1ScoreVal = p1ScoreVal - 1;
+                    tank1Minus();
                 }
                 if (minusr > 10) {
                     p2ScoreVal = p2ScoreVal + 1;
+                    tank2Plus();
                 }
                 break;
             case 20:
@@ -359,9 +392,11 @@ public class Single extends Activity {
                 minusr = minus.nextInt(200);
                 if (plusr > 5) {
                     p1ScoreVal = p1ScoreVal - 1;
+                    tank1Minus();
                 }
                 if (minusr > 5) {
                     p2ScoreVal = p2ScoreVal + 1;
+                    tank2Plus();
                 }
                 break;
 
@@ -563,7 +598,6 @@ public class Single extends Activity {
         }
 
     }
-
     public void buttonListiner() {
         Button plus = (Button) findViewById(R.id.p1Plus);
         plus.setOnClickListener(new View.OnClickListener() {
@@ -572,6 +606,7 @@ public class Single extends Activity {
                 p1ScoreVal = p1ScoreVal + 1;
                 setScores();
                 compareScores();
+                tank1Plus();
             }
         });
         Button minus = (Button) findViewById(R.id.p1Minus);
@@ -579,17 +614,60 @@ public class Single extends Activity {
             @Override
             public void onClick(View v) {
                 p2ScoreVal = p2ScoreVal - 1;
+                tank2Minus();
             }
         });
     }
-
+    public void tank1Plus(){
+        ImageView tank1 = (ImageView) findViewById(R.id.image1);
+        DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        int width = metrics.widthPixels;
+        int height = metrics.heightPixels;
+        int divided = (int) (tank1.getLeft() - (((width/2)-37)/goalScore));
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        params.leftMargin = divided;
+        tank1.setLayoutParams(params);
+    }
+    public void tank1Minus() {
+        ImageView tank1 = (ImageView) findViewById(R.id.image1);
+        DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        int width = metrics.widthPixels;
+        int height = metrics.heightPixels;
+        int divided = (int) (tank1.getLeft() + (((width/2)-37)/goalScore));
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        params.leftMargin = divided;
+        tank1.setLayoutParams(params);
+    }
+    public void tank2Plus() {
+        ImageView tank2 = (ImageView) findViewById(R.id.image2);
+        DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        int width = metrics.widthPixels;
+        int height = metrics.heightPixels;
+        int divided = (int) (tank2.getLeft() - (((width/2)-37)/goalScore));
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        params.leftMargin = divided;
+        tank2.setLayoutParams(params);
+    }
+    public void tank2Minus() {
+        ImageView tank2 = (ImageView) findViewById(R.id.image2);
+        DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        int width = metrics.widthPixels;
+        int height = metrics.heightPixels;
+        int divided = (int) (tank2.getLeft() + (((width/2)-37)/goalScore));
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        params.leftMargin = divided;
+        tank2.setLayoutParams(params);
+    }
     public void setScores() {
         TextView p1Scorea = (TextView) findViewById(R.id.p1Scorez);
         TextView p2Scorea = (TextView) findViewById(R.id.p2Scorez);
         p1Scorea.setText("" + p1ScoreVal + "");
         p2Scorea.setText("" + p2ScoreVal + "");
     }
-
     public void compareScores() {
         int antiGoalScore = goalScore - 2 * goalScore;
         if (p1ScoreVal >= goalScore) {
@@ -603,7 +681,6 @@ public class Single extends Activity {
         } else {
         }
     }
-
     public void sendP1() {
         timeDecider = false;
         Intent intent20 = new Intent(this, Done.class);
@@ -611,7 +688,6 @@ public class Single extends Activity {
         intent20.putExtra("singleLvl", lvl);    //sends level to end
         startActivity(intent20);
     }
-
     public void sendP2() {
         timeDecider = false;
         Intent intent20 = new Intent(this, Done.class);
@@ -619,12 +695,10 @@ public class Single extends Activity {
         intent20.putExtra("singleLvl", lvl);    //sends level to end
         startActivity(intent20);
     }
-
     public void goHome() {
         Intent goHome = new Intent(this, Welcome.class);
         startActivity(goHome);
     }
-
     public void codeSender(int value) {
         Intent codeIntentSingle = new Intent(this, Single.class);
         Intent codeIntentDouble = new Intent(this, Double.class);
@@ -832,7 +906,6 @@ public class Single extends Activity {
 
         }
     }
-
     public void showCode() {
         final EditText lvlCode = new EditText(this);
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
@@ -936,7 +1009,6 @@ public class Single extends Activity {
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         timeDecider = false;
@@ -944,7 +1016,6 @@ public class Single extends Activity {
         inflater.inflate(R.layout.menu, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -959,7 +1030,6 @@ public class Single extends Activity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
     @Override
     public void onBackPressed() {
         super.onBackPressed();

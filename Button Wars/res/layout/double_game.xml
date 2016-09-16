@@ -5,14 +5,15 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:screenOrientation="portrait">
+                android:screenOrientation="portrait"
+                android:background="@drawable/background">
     >
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     android:orientation="vertical"
                     android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
+                    android:layout_height="wrap_content"
                     android:id="@+id/player2Set"
-                    android:layout_above="@+id/player1Set">
+                    android:layout_above="@+id/picture2">
         <com.isotope.Button_Wars.RotateButton
                 android:layout_height="wrap_content"
                 android:id="@+id/p2Pause"
@@ -28,7 +29,7 @@
                 android:text="@string/player1"
                 android:id="@+id/player1a"
                 android:layout_toLeftOf="@+id/p2Pause"
-                android:layout_above="@+id/p2Pause"></com.isotope.Button_Wars.UpsideDownText>
+                android:layout_alignParentBottom="true"></com.isotope.Button_Wars.UpsideDownText>
         <com.isotope.Button_Wars.UpsideDownText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -44,7 +45,8 @@
                 android:text="@string/player2"
                 android:id="@+id/player2a"
                 android:layout_toRightOf="@+id/p2Pause"
-                android:layout_above="@+id/p2Pause"></com.isotope.Button_Wars.UpsideDownText>
+                android:layout_above="@+id/p2Pause"
+                android:layout_alignParentBottom="true"></com.isotope.Button_Wars.UpsideDownText>
         <com.isotope.Button_Wars.UpsideDownText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -85,8 +87,35 @@
                 android:layout_toRightOf="@+id/p2Pause"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_above="@+id/p1Scorea"></com.isotope.Button_Wars.RotateButton>
+    </RelativeLayout>
 
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/picture1"
+        android:layout_above="@id/player1Set">
 
+    <ImageView
+            android:id="@+id/image1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/player1"
+            android:layout_centerHorizontal="true"/>
+</RelativeLayout>
+    <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/picture2"
+            android:layout_above="@id/picture1">
+
+        <ImageView
+                android:id="@+id/image2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/player2a"
+                android:layout_centerHorizontal="true"/>
     </RelativeLayout>
 
     <RelativeLayout
@@ -104,18 +133,14 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/pause"
                 android:id="@+id/p1Pause"
-                android:layout_centerVertical="true"
-                andorid:layout_centerHorizontal="true"
-                andorid:layout_alignParentTop="true"
-                />
+                andorid:layout_centerHorizontal="true" andorid:layout_alignParentTop="true"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="@string/player1"
                 android:id="@+id/player1"
-                andorid:layout_toLeftOf="@+id/p1Pause"
-                andorid:layout_below="@+id/p1Pause"/>
+                andorid:layout_toLeftOf="@+id/p1Pause"/>
         <TextView
                 andorid:layout_width="wrap_content"
                 andorid:layout_height="wrap_content"
@@ -130,8 +155,7 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="@string/player2"
                 android:id="@+id/player2"
-                andorid:layout_toRightOf="@+id/p1Pause"
-                andorid:layout_below="@+id/p1Pause"/>
+                andorid:layout_toRightOf="@+id/p1Pause"/>
         <TextView
                 andorid:layout_width="wrap_content"
                 andorid:layout_height="wrap_content"
@@ -168,7 +192,8 @@
                 andorid:layout_height="wrap_content"
                 andorid:layout_toRightOf="@+id/p1Pause"
                 andorid:layout_below="@+id/p1Score"
-                android:textAppearance="?android:attr/textAppearanceLarge"/>
+                android:textAppearance="?android:attr/textAppearanceLarge"
+           />
     </RelativeLayout>
 
     <com.google.ads.AdView android:id="@+id/adView"
@@ -178,6 +203,5 @@
                            ads:adUnitId="a15294da162b2a7"
                            ads:adSize="BANNER"
                            ads:loadAdOnCreate="true"/>
-
 
 </RelativeLayout>
