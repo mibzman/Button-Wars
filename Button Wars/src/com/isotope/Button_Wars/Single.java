@@ -11,7 +11,6 @@ import android.os.Handler;
 import android.util.DisplayMetrics;
 import android.view.*;
 import android.widget.*;
-import com.startapp.android.publish.StartAppSDK;
 
 import java.util.Random;
 
@@ -28,14 +27,12 @@ public class Single extends Activity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        StartAppSDK.init(this, "107171153", "208427773", true);
         setContentView(R.layout.game);
         lvlGetter();
         startSingleStart();
         pauseListiner();
         buttonListiner();
     }
-
     protected void onPause() {
         super.onPause();
         timeDecider = false;
@@ -407,7 +404,6 @@ public class Single extends Activity {
         compareScores();
         repeatr();
     }
-
     public void lvlGetter() {
         Intent intent30 = getIntent();
         boolean first = intent30.getBooleanExtra("corn", true);

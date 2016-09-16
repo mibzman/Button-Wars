@@ -13,7 +13,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import com.startapp.android.publish.StartAppSDK;
 
 public class DoubleDone extends Activity {
     final Context context2 = this;
@@ -21,7 +20,6 @@ public class DoubleDone extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        StartAppSDK.init(this, "107171153", "208427773", true);
         setContentView(R.layout.double_done);
         //makeAd();
         buttonListiner();

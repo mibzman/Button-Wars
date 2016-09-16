@@ -17,7 +17,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.google.ads.*;
 import android.os.Bundle;
-import com.startapp.android.publish.StartAppSDK;
 
 public class Welcome extends Activity {
     AdView adView;
@@ -26,7 +25,6 @@ public class Welcome extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        StartAppSDK.init(this, "107171153", "208427773", true);
         setContentView(R.layout.main);
         buttonListiner();
     }

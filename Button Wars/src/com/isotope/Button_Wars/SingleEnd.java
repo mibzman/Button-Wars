@@ -12,7 +12,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import com.startapp.android.publish.StartAppSDK;
 
 
 public class SingleEnd extends Activity {
@@ -20,7 +19,6 @@ public class SingleEnd extends Activity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        StartAppSDK.init(this, "107171153", "208427773", true);
         setContentView(R.layout.single_end);
         buttonListiner();
     }

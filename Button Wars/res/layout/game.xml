@@ -118,10 +118,12 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"/>
     </RelativeLayout>
 
-    <com.startapp.android.publish.banner.Banner
-            android:id="@+id/startAppBanner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"/>
+    <com.google.ads.AdView android:id="@+id/adView"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_alignParentBottom="true"
+                           ads:adUnitId="a15294da162b2a7"
+                           ads:adSize="BANNER"
+                           ads:loadAdOnCreate="true"/>
 
 </RelativeLayout>

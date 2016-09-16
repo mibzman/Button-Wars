@@ -13,7 +13,6 @@ import android.widget.*;
 import com.google.ads.AdRequest;
 import com.google.ads.AdSize;
 import com.google.ads.AdView;
-import com.startapp.android.publish.StartAppSDK;
 
 @SuppressWarnings("deprecation")
 public class Double extends Activity {
@@ -28,12 +27,11 @@ public class Double extends Activity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        StartAppSDK.init(this, "107171153", "208427773", true);
         setContentView(R.layout.double_game);
         //makeAd();
         pauseListiner();
         buttonListener();
-        lvlGetter();
+        //lvlGetter();
         setScores();
         startDoubleStart();
     }
@@ -296,7 +294,7 @@ public class Double extends Activity {
         intent2.putExtra("message", lvl);    //sends level to end
         startActivity(intent2);
     }
-    public void lvlGetter() {
+   /* public void lvlGetter() {                           -
         Intent intent3 = getIntent();
         boolean first = intent3.getBooleanExtra("first", true);
         Intent codeIntentSingle = getIntent();
@@ -312,9 +310,6 @@ public class Double extends Activity {
                         goalScore = 15;
                         break;
                     case 3:
-                        goalScore = 20;
-                        break;
-                    case 4:
                         goalScore = 25;
                         break;
                     case 5:
@@ -440,7 +435,7 @@ public class Double extends Activity {
             }
         }
 
-    }
+    }    */
     public void pauseListiner() {
         Button p1Pause = (Button) findViewById(R.id.p1Pause);
         p1Pause.setOnClickListener(new View.OnClickListener() {
