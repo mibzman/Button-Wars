@@ -13,6 +13,7 @@ import android.widget.*;
 import com.google.ads.AdRequest;
 import com.google.ads.AdSize;
 import com.google.ads.AdView;
+import com.startapp.android.publish.StartAppSDK;
 
 @SuppressWarnings("deprecation")
 public class Double extends Activity {
@@ -27,8 +28,9 @@ public class Double extends Activity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        StartAppSDK.init(this, "107171153", "208427773", true);
         setContentView(R.layout.double_game);
-
+        //makeAd();
         pauseListiner();
         buttonListener();
         lvlGetter();

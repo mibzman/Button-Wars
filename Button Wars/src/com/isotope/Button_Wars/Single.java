@@ -11,6 +11,7 @@ import android.os.Handler;
 import android.util.DisplayMetrics;
 import android.view.*;
 import android.widget.*;
+import com.startapp.android.publish.StartAppSDK;
 
 import java.util.Random;
 
@@ -27,6 +28,7 @@ public class Single extends Activity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        StartAppSDK.init(this, "107171153", "208427773", true);
         setContentView(R.layout.game);
         lvlGetter();
         startSingleStart();
